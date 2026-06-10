@@ -1,0 +1,11 @@
+[package]
+name = "dexlyn_collection_admin"
+version = "1.0.0"
+
+[addresses]
+dexlyn_fees_collector_admin = "0x58900e298667ee78ed8e7056ad88a7f04fde7f107077fde383cdbb5e9740e355"
+
+[dependencies.AptosStdlib]
+git = "https://github.com/Entropy-Foundation/aptos-core.git"
+subdir = "aptos-move/framework/aptos-stdlib"
+rev = "dev"
