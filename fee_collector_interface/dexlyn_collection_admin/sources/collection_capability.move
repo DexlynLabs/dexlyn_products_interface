@@ -15,5 +15,5 @@ module dexlyn_collection_admin::collection_capability {
     native public fun check_collection_capability(account: &signer);
 
     #[view]
-    public fun exists_at(addr: address): bool;
+    native public fun exists_at(addr: address): bool;
 }
