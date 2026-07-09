@@ -1,10 +1,12 @@
 [package]
-name = "DexlynTokenomics"
+name = "dexlyn-perp-trade"
 version = "1.0.0"
 authors = []
 
 [addresses]
-dexlyn_tokenomics = "0xd0f6f330a63f705882c7a3d67f79f0047aa48bfd5e56946b0b157773675e5d1f" # QA Address
+#QA Address
+dexlyn = "0x3191f19158cc850fea33ba5e98f82bdd33988b4aeeb3e3863d639e6f24638044"
+
 
 [dev-addresses]
 
