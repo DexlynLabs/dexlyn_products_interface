@@ -35,6 +35,12 @@ module dexlyn_tokenomics::dxlyn_coin {
     /// * `amounts` - The vector of amounts of dxlyn tokens to transfer.
     native public fun bluk_fa_transfer(sender: &signer, recipents: vector<address>, amounts: vector<u64>);
 
+    /// Burn dxlyn token
+    ///
+    /// # Arguments
+    /// * `owner` - The signer of the transaction, representing the owner whose dxlyn tokens will be burned.
+    /// * `amount` - The amount of dxlyn tokens to burn.
+    native public fun burn_coin(owner: &signer, amount: u64);
 
     // -----------------------------------------------------------------------------
     //                                VIEW FUNCTIONS
