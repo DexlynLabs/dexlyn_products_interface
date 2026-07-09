@@ -147,6 +147,13 @@ module dexlyn_clmm::pool {
         fee_b: u64,
     }
 
+    /// The protocol fees accumulated in a pool.
+    struct ProtocolFeesView has drop {
+        pool_address: address,
+        amount_a: u64,
+        amount_b: u64,
+    }
+
     /// Open a position
     /// params
     ///     - account The position owner
@@ -627,6 +634,10 @@ module dexlyn_clmm::pool {
         pool_addresses: vector<address>
     ): vector<Option<PoolDetails>>;
 
+    #[view]
+    /// Get the protocol fees for multiple pools.
+    native public fun get_protocol_fees(pool_addresses: vector<address>): vector<ProtocolFeesView>;
+
     /// Destructure PoolDetails into its individual fields.
     /// details - Reference to PoolDetails.
     /// Returns a tuple of all fields in PoolDetails.
@@ -689,5 +700,12 @@ module dexlyn_clmm::pool {
     /// Returns a tuple of all fields in PositionReward.
     native public fun destructure_position_reward(reward: &PositionReward): (
         address, u64, u64, u64
+    );
+
+    /// Destructure PoolProtocolFees into its individual fields.
+    /// fees - Reference to PoolProtocolFees.
+    /// Returns a tuple of all fields in PoolProtocolFees.
+    native public fun destructure_pool_protocol_fees(fees: &ProtocolFeesView): (
+        address, u64, u64
     );
 }

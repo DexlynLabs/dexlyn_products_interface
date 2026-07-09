@@ -488,4 +488,14 @@ module dexlyn_clmm::clmm_router {
         start_index: u64,
         end_index: u64
     );
+
+    /// Collect the protocol fees accumulated in the given pools and transfer them to the collector.
+    /// Params
+    ///     - collector The fees collector signer
+    ///     - pool_addresses The pool account addresses to collect protocol fees from
+    /// Returns
+    native entry fun collect_protocol_fees_by_collector(
+        collector: &signer,
+        pool_addresses: vector<address>,
+    );
 }
