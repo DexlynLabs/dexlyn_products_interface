@@ -133,7 +133,5 @@ module dexlyn_swap::scripts {
      X10, Y10, C10
     >(pools_length: u8): vector<ProtocolFeesView> ;
 
-    public fun destructure_pool_protocol_fees(fees: &ProtocolFeesView): (TypeInfo, TypeInfo, TypeInfo, address, u64, u64) {
-        (fees.coin_type_x, fees.coin_type_y, fees.coin_type_curve, fees.lp_pool_object_addr, fees.amount_a, fees.amount_b)
-    }
+    public native fun destructure_pool_protocol_fees(fees: &ProtocolFeesView): (TypeInfo, TypeInfo, TypeInfo, address, u64, u64);
 }
