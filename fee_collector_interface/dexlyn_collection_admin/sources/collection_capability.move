@@ -1,5 +1,5 @@
 /// Shared capability for epoch fee collection. Used by protocols and `dexlyn_fees_collector`.
-module dexlyn_collection_admin::collection_capability {
+module dexlyn_fees_collector_admin::collection_capability {
 
     const E_CAPABILITY_MISSING: u64 = 1;
     const E_NOT_FEE_COLLECTOR_ADMIN: u64 = 2;
