@@ -468,6 +468,18 @@ module dexlyn_clmm::pool {
         pool_address: address, index: u64, limit: u64
     ): (u64, vector<Position>);
 
+    /// Collect the protocol fee by the fees collector holding the `CollectionCapability`
+    /// issued by the dexlyn fees collector admin.
+    /// Params
+    ///     - collector The fees collector signer
+    ///     - pool_address The address of pool
+    /// Return
+    ///     FA, FA
+    native public fun collect_protocol_fee_by_collector(
+        collector: &signer,
+        pool_address: address
+    ): (FungibleAsset, FungibleAsset);
+
 
     #[view]
     /// Calculate the swap result.
