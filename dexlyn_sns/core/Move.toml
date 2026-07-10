@@ -1,0 +1,32 @@
+[package]
+name = 'supra_names'
+version = '1.0.0'
+upgrade_policy = "compatible"
+
+[addresses]
+router_signer = "0x87d7f73934946543550d45efb76a60193d0ad415fea984fe70cbbd2bc38afe8d"
+supra_names = "0x5b3edb4f28b69c21d11ca55120460f1ad1f0baa20fb5ccbe4663092faee9ac48"
+supra_names_admin = "0x5b3edb4f28b69c21d11ca55120460f1ad1f0baa20fb5ccbe4663092faee9ac48"
+supra_names_funds = "0x5b3edb4f28b69c21d11ca55120460f1ad1f0baa20fb5ccbe4663092faee9ac48"
+
+
+[dependencies.SupraFramework]
+git = "https://github.com/Entropy-Foundation/aptos-core.git"
+rev = "dev"
+subdir = "aptos-move/framework/supra-framework"
+
+
+[dependencies.AptosToken]
+git = 'https://github.com/Entropy-Foundation/aptos-core.git'
+subdir = 'aptos-move/framework/aptos-token'
+rev = 'dev'
+
+[dependencies.AptosTokenObjects]
+git = 'https://github.com/Entropy-Foundation/aptos-core.git'
+subdir = 'aptos-move/framework/aptos-token-objects'
+rev = 'dev'
+
+[dependencies.dexlyn_collection_admin]
+git="https://github.com/DexlynLabs/dexlyn_products_interface.git"
+rev="testnet"
+subdir="fee_collector_interface/dexlyn_collection_admin"
