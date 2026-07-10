@@ -1,6 +1,18 @@
 /// The current module contains pre-deplopyed scripts for dexlyn_swap.
 module dexlyn_swap::scripts {
 
+    use aptos_std::type_info::TypeInfo;
+
+    /// The protocol fees accumulated in a pool.
+    struct ProtocolFeesView has copy, drop {
+        coin_type_x: TypeInfo,
+        coin_type_y: TypeInfo,
+        coin_type_curve: TypeInfo,
+        lp_pool_object_addr: address,
+        amount_a: u64,
+        amount_b: u64,
+    }
+
     /// Register a new liquidity pool for `X`/`Y` pair.
     ///
     /// Note: X, Y generic coin parameters must be sorted.
@@ -105,4 +117,23 @@ module dexlyn_swap::scripts {
     X9, Y9, C9,
     X10, Y10, C10
     >(collector: &signer, pools_length: u8);
+
+    #[view]
+    // Returns the accrued protocol (DAO) fees for up to 10 pools
+    public native fun get_accrued_protocol_fees
+    <X1, Y1, C1,
+     X2, Y2, C2,
+     X3, Y3, C3,
+     X4, Y4, C4,
+     X5, Y5, C5,
+     X6, Y6, C6,
+     X7, Y7, C7,
+     X8, Y8, C8,
+     X9, Y9, C9,
+     X10, Y10, C10
+    >(pools_length: u8): vector<ProtocolFeesView> ;
+
+    public fun destructure_pool_protocol_fees(fees: &ProtocolFeesView): (TypeInfo, TypeInfo, TypeInfo, address, u64, u64) {
+        (fees.coin_type_x, fees.coin_type_y, fees.coin_type_curve, fees.lp_pool_object_addr, fees.amount_a, fees.amount_b)
+    }
 }
