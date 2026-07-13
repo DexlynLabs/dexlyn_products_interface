@@ -1,0 +1,12 @@
+[package]
+name = "UniveralRouter"
+version = "1.0.0"
+authors = []
+
+[addresses]
+dexlyn_aggregator = "0x0e2401cf34b8af8881c2ad64c431a273bf0399bb54922f7adbf30f9ca8ef5bd7"
+
+[dependencies.SupraFramework]
+git = "https://github.com/Entropy-Foundation/aptos-core.git"
+rev = "dev"
+subdir = "aptos-move/framework/supra-framework"
