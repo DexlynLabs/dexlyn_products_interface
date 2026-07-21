@@ -1,0 +1,16 @@
+[package]
+name = 'DexlynTokenomicsWrapper'
+version = '1.0.0'
+authors = []
+
+[addresses]
+dexlyn_tokenomics_wrapper = "0xf91f3e8a61442d0274b6507a427fb64620b66a2ccc4c915738cde45300ed88bc" # testnet Address
+
+[dev-addresses]
+
+[dependencies.SupraFramework]
+git = "https://github.com/Entropy-Foundation/aptos-core.git"
+rev = "dev"
+subdir = "aptos-move/framework/supra-framework"
+
+[dev-dependencies]

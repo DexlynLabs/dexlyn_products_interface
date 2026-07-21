@@ -1,4 +1,4 @@
-module dexlyn_tokenomics::voter {
+module dexlyn_tokenomics_wrapper::voter_wrapper {
     /// Collect accumulated protocol fees. Admin only.
     ///
     /// # Arguments
