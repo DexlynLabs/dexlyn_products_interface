@@ -4,7 +4,7 @@ version = "1.0.0"
 authors = []
 
 [addresses]
-dexlyn_aggregator = "0x0e2401cf34b8af8881c2ad64c431a273bf0399bb54922f7adbf30f9ca8ef5bd7"
+dexlyn_aggregator = "0xda93ad85d8098b81b2a314792792c50be6e4931267ff5fefa433cb75195a299d"
 
 [dependencies.SupraFramework]
 git = "https://github.com/Entropy-Foundation/aptos-core.git"
