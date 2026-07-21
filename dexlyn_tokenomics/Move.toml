@@ -4,7 +4,7 @@ version = "1.0.0"
 authors = []
 
 [addresses]
-dexlyn_tokenomics = "0xd0f6f330a63f705882c7a3d67f79f0047aa48bfd5e56946b0b157773675e5d1f" # QA Address
+dexlyn_tokenomics = "0xf91f3e8a61442d0274b6507a427fb64620b66a2ccc4c915738cde45300ed88bc" # testnet Address
 
 [dev-addresses]
 
